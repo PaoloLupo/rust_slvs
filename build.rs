@@ -107,7 +107,7 @@ fn main() {
         .clang_arg("c++")
         .clang_arg("-std=c++11")
         .clang_arg("-fvisibility=default")
-        .parse_callbacks(Box::new(CargoCallbacks))
+        .parse_callbacks(Box::new(CargoCallbacks::new()))
         .generate()
         .expect("Unable to generate bindings");
 

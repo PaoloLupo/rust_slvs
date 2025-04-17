@@ -24,7 +24,7 @@ include = [
 ]
 
 [build-dependencies]
-bindgen = "0.64.0"
+bindgen = "0.71.1"
 cc = "1.0.79"
 dunce = "1.0.3"
 
