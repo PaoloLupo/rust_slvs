@@ -2,7 +2,6 @@ use std::env;
 use std::path::PathBuf;
 
 extern crate bindgen;
-use bindgen::CargoCallbacks;
 use dunce::canonicalize;
 
 fn main() {
@@ -107,7 +106,7 @@ fn main() {
         .clang_arg("c++")
         .clang_arg("-std=c++11")
         .clang_arg("-fvisibility=default")
-        .parse_callbacks(Box::new(CargoCallbacks::new()))
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         .generate()
         .expect("Unable to generate bindings");
 

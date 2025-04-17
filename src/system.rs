@@ -1014,7 +1014,7 @@ impl System {
         group: Slvs_hGroup,
         val: f64,
     ) -> Result<(), &'static str> {
-        let mut param = self.mut_slvs_param(h)?;
+        let param = self.mut_slvs_param(h)?;
         param.group = group;
         param.val = val;
 
