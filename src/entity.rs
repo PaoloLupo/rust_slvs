@@ -124,7 +124,7 @@ pub struct EntityHandle<E: AsEntityData> {
 }
 
 impl<E: AsEntityData> EntityHandle<E> {
-    pub(crate) fn new(handle: u32) -> Self {
+    pub fn new(handle: u32) -> Self {
         Self {
             handle,
             phantom: PhantomData,
